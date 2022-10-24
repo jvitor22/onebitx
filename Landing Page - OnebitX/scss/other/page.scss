@@ -1,0 +1,74 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: url(../../images/backgroundLp.png);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: right;
+  color: white;
+}
+
+.container1{
+  background-color: $bg-color;
+  max-width: 450px;
+  height: auto;
+  padding: 30px 0;
+}
+
+img {
+  width: 180px;
+  animation: topToDown 750ms;
+}
+
+.sendBtn {
+  color: $primary-color;
+  border: 1px solid $primary-color;
+
+  &:hover {
+    color: white;
+    background-color: $primary-color;
+  }
+}
+
+.footer {
+  font-weight: 700;
+  margin-bottom: -30px;
+  animation: downToTop 750ms;
+}
+
+.footer a{
+  text-decoration: none;
+  color: white;
+  transition: 500ms;
+
+  &:hover {
+  color: $primary-color;
+  }
+}
+
+@keyframes topToDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-70px);
+  } 
+  
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes downToTop {
+  0% {
+    opacity: 0;
+    transform: translateY(70px);
+  } 
+  
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
